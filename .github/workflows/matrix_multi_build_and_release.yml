@@ -50,12 +50,12 @@ jobs:
         qbt_build_tool: ["", cmake]
         include:
           - qbt_build_tool: ""
-            qbt_qt_version_name: "qt5-"
-            qbt_qt_version: "5"
+            qbt_qt_version_name: "qt4-"
+            qbt_qt_version: "4"
 
           - qbt_build_tool: "cmake"
             qbt_qt_version_name: ""
-            qbt_qt_version: "6"
+            qbt_qt_version: "4"
 
     name: "${{ matrix.qbt_cross_name }}-${{ matrix.qbt_qt_version_name }}libtorrent-v${{ matrix.qbt_libtorrent_version }}"
 
