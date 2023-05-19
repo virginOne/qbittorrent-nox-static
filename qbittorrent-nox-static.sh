@@ -761,7 +761,7 @@ _set_module_urls() {
 	source_archive_url[double_conversion]="https://github.com/google/double-conversion/archive/refs/tags/${github_tag[double_conversion]}.tar.gz"
 	source_archive_url[openssl]="https://github.com/openssl/openssl/archive/${github_tag[openssl]}.tar.gz"
 	source_archive_url[boost]="https://boostorg.jfrog.io/artifactory/main/release/${github_tag[boost]/boost-/}/source/${github_tag[boost]//[-\.]/_}.tar.gz"
-	source_archive_url[libtorrent]="https://github.com/arvidn/libtorrent/releases/download/${github_tag[libtorrent]}/libtorrent-rasterbar-${github_tag[libtorrent]#v}.tar.gz"
+	source_archive_url[libtorrent]="https://github.com/arvidn/libtorrent/releases/download/libtorrent-1_1/libtorrent-rasterbar-1.1.0.tar.gz"
 
 	read -ra qt_version_short_array <<< "${app_version[qtbase]//\./ }"
 	qt_version_short="${qt_version_short_array[0]}.${qt_version_short_array[1]}"
@@ -1838,7 +1838,7 @@ while (("${#}")); do
 				[[ "${github_tag[libtorrent]}" =~ ^libtorrent- ]] && app_version[libtorrent]="${github_tag[libtorrent]#libtorrent-}" app_version[libtorrent]="${app_version[libtorrent]//_/\.}"
 				[[ "${github_tag[libtorrent]}" =~ ^libtorrent_ ]] && app_version[libtorrent]="${github_tag[libtorrent]#libtorrent_}" app_version[libtorrent]="${app_version[libtorrent]//_/\.}"
 				[[ "${github_tag[libtorrent]}" =~ ^v[0-9] ]] && app_version[libtorrent]="${github_tag[libtorrent]#v}"
-				source_archive_url[libtorrent]="https://github.com/arvidn/libtorrent/releases/download/${github_tag[libtorrent]}/libtorrent-rasterbar-${app_version[libtorrent]}.tar.gz"
+				source_archive_url[libtorrent]="https://github.com/arvidn/libtorrent/releases/download/libtorrent-1_1/libtorrent-rasterbar-1.1.0.tar.gz"
 				if ! _curl "${source_archive_url[libtorrent]}" &> /dev/null; then
 					source_default[libtorrent]="folder"
 				fi
