@@ -45,27 +45,20 @@ jobs:
         #     mips64el,
         #     riscv64,
         #   ]
-        qbt_cross_name: [armhf, armv7, aarch64, x86_64, x86]
-        qbt_libtorrent_version: ["1.2", "2.0"]
+        qbt_cross_name: [ x86_64]
+        qbt_libtorrent_version: ["1.1"]
         qbt_build_tool: ["", cmake]
         qbt_boost_tag: [boost-1.82.0.beta1]
         qbt_qbittorrent_tag: [release-4.1.9]
         include:
           - qbt_build_tool: ""
-            qbt_qt_version_name: "qt5-"
-            qbt_qt_version: "5"
-            qbt_qt_tag: "v5.15.8-lts-lgpl"
+            qbt_qt_version_name: "qt4-"
+            qbt_qt_version: "4"
+            qbt_qt_tag: "v4.1.9-lts-lgpl"
 
-          - qbt_build_tool: "cmake"
-            qbt_qt_version_name: ""
-            qbt_qt_version: "6"
-            qbt_qt_tag: "v6.5.0-rc1"
 
-          - qbt_libtorrent_version: "2.0"
-            libtorrent_tag: "RC_2_0"
-
-          - qbt_libtorrent_version: "1.2"
-            libtorrent_tag: "RC_1_2"
+          - qbt_libtorrent_version: "1.1"
+            libtorrent_tag: "RC_1_1"
 
     name: "${{ matrix.qbt_cross_name }}-${{ matrix.qbt_qt_version_name }}libtorrent-v${{ matrix.qbt_libtorrent_version }}"
 
