@@ -47,11 +47,11 @@ jobs:
         #   ]
         qbt_cross_name: [ x86_64]
         qbt_libtorrent_version: ["1.1.0"]
-        qbt_build_tool: ["", cmake]
+        qbt_build_tool: [cmake]
         qbt_boost_tag: [boost-1.82.0.beta1]
         qbt_qbittorrent_tag: [release-4.1.9]
         include:
-          - qbt_build_tool: ""
+          - qbt_build_tool: "cmake"
             qbt_qt_version_name: "qt4-"
             qbt_qt_version: "4"
             qbt_qt_tag: "v4.1.9-lts-lgpl"
