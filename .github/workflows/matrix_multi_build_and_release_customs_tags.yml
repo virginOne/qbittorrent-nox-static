@@ -46,7 +46,7 @@ jobs:
         #     riscv64,
         #   ]
         qbt_cross_name: [ x86_64]
-        qbt_libtorrent_version: ["1.1"]
+        qbt_libtorrent_version: ["1.1.0"]
         qbt_build_tool: ["", cmake]
         qbt_boost_tag: [boost-1.82.0.beta1]
         qbt_qbittorrent_tag: [release-4.1.9]
@@ -57,8 +57,8 @@ jobs:
             qbt_qt_tag: "v4.1.9-lts-lgpl"
 
 
-          - qbt_libtorrent_version: "1.1"
-            libtorrent_tag: "RC_1_1"
+          - qbt_libtorrent_version: "1.1.0"
+            libtorrent_tag: "1_1"
 
     name: "${{ matrix.qbt_cross_name }}-${{ matrix.qbt_qt_version_name }}libtorrent-v${{ matrix.qbt_libtorrent_version }}"
 
