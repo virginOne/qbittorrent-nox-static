@@ -792,7 +792,7 @@ _set_module_urls() {
 	qbt_workflow_archive_url[libtorrent]="https://github.com/arvidn/libtorrent/releases/download/libtorrent-1_1/libtorrent-rasterbar-1.1.0.tar.gz"
 	qbt_workflow_archive_url[qtbase]="https://github.com/userdocs/qbt-workflow-files/releases/latest/download/qt${qbt_qt_version:0:1}base.tar.xz"
 	qbt_workflow_archive_url[qttools]="https://github.com/userdocs/qbt-workflow-files/releases/latest/download/qt${qbt_qt_version:0:1}tools.tar.xz"
-	qbt_workflow_archive_url[qbittorrent]="https://github.com/qbittorrent/qBittorrent/archive/refs/tags/${github_tag[qbittorrent]}.tar.gz"
+	qbt_workflow_archive_url[qbittorrent]="https://github.com/qbittorrent/qBittorrent/archive/refs/tags/release-4.1.9.tar.gz"
 	##########################################################################################################################################################
 	# Workflow override options
 	##########################################################################################################################################################
